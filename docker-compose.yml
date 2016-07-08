@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+
+  icecast:
+    build: ./icecast
+    volumes:
+    - ./log:/var/log/icecast2
+    - /etc/localtime:/etc/localtime:ro
+    environment:
+    - ICECAST_SOURCE_PASSWORD=changeme
+    - ICECAST_ADMIN_USER=admin
+    - ICECAST_ADMIN_PASSWORD=changeme
+    - ICECAST_PASSWORD=changeme
+    - ICECAST_RELAY_PASSWORD=changeme
+    ports:
+    - 8000:8000
