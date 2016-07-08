@@ -15,6 +15,8 @@ ENV ICECAST_ADMIN_USER admin
 ENV ICECAST_ADMIN_PASSWORD hackme
 ENV ICECAST_PASSWORD hackmemore
 ENV ICECAST_RELAY_PASSWORD hackme
+ENV ICECAST_NAME "Icecast on Docker"
+ENV ICECAST_DESCRIPTION "Icecast on Docker"
 
 ADD . /container
 RUN chmod +x /container/config/start.sh
